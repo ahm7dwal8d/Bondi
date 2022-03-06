@@ -278,11 +278,12 @@ body {
 .contact {
     background-color: #fec400;
     height: 200px;
+    overflow: hidden;
 }
 .contact input {
     border: none;
     border-bottom: 1px solid white;
-    width: 450px;
+    width: 300px;
     padding: 11px;
     background: none;
 }
