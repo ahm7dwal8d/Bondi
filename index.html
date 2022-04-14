@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bondi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,
@@ -27,19 +27,19 @@ rel="stylesheet">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                <a class="nav-link active" href="#" data-scroll="landing">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#services">Services</a>
+                <a class="nav-link" href="#" data-scroll="feat">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#portfolio">Portfolio</a>
+                <a class="nav-link" href="#" data-scroll="porfolio">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#about">About</a>
+                <a class="nav-link " href="#" data-scroll="about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#contact">Contact</a>
+                <a class="nav-link" href="#" data-scroll="contact">Contact</a>
               </li>
             </ul>
             <div class="search ps-3 pe-3 d-md-none d-lg-block">
@@ -49,32 +49,9 @@ rel="stylesheet">
           </div>
         </div>
       </nav>
-      <div class="input">
-        <input type="text">
-        <div class="exit">
-            <i class="fas fa-times-circle"></i>
-        </div>
-    </div>
-    <div class="login d-flex justify-content-center align-items-center">
-        <form action="">
-            <label for="" class="text-white text-capitalize fs-4 pb-2">your name:</label>
-            <br>
-            <input type="text" placeholder="Enter Your Name " class="p-2">
-            <br>
-            <label for="" class="text-white text-capitalize fs-4 pb-2 pt-2">password:</label>
-            <br>
-            <input type="password" name="" id="passvalid" placeholder="Enter Complex Paswword" class="p-2">
-            <button class="show text-capitalize p-2">Show Password</button>
-            <br>
-            <input type="submit" value="submit" class="p-2 text-capitalize mt-2">
-        </form>
-        <div class="exit">
-            <i class="fas fa-times-circle fs-2 text-white"></i>
-        </div>
-    </div>
     <!-- End Navbar -->
     <!-- Start landing  -->
-    <div class="landing d-flex justify-content-center align-items-center position-relative" id="home">
+    <div class="landing d-flex justify-content-center align-items-center position-relative">
         <div class="text-center text-light info">
             <h1 class="pt-2 pb-2 fw-bold">Taste the Creativity</h1>
             <p class="fs-5 text-white-50">We make awesome graphic and web design</p>
@@ -83,7 +60,7 @@ rel="stylesheet">
     </div>
     <!-- End landing  -->
     <!-- Start Feat -->
-    <div class="feat" id="services">
+    <div class="feat">
         <div class="container">
         <div class="text-center">
             <div class="head pt-5 pb-5 position-relative">
@@ -131,7 +108,7 @@ rel="stylesheet">
     </div>
     <!-- End Feat -->
     <!-- Start Portfolio  -->
-    <div class="porfolio pt-5 pb-5" id="portfolio">
+    <div class="porfolio pt-5 pb-5">
         <div class="container">
             <div class="text-center">
                 <div class="head pt-5 pb-5 position-relative">
@@ -142,54 +119,54 @@ rel="stylesheet">
             </div>
                 <div class="text-center mb-5 mt-5">
                     <div class="links">
-                        <a href="#" class="btn active">all</a>
+                        <a href="#" class="active text-decoration-none text-capitalize rounded-3" data-fillter="all">all</a>
                         \
-                        <a href="#" class="text-decoration-none text-dark p-2 text-capitalize rounded-3">Design</a>
+                        <a href="#" class="text-decoration-none p-2 text-capitalize rounded-3" data-fillter="Design">Design</a>
                         \
-                        <a href="#" class="text-decoration-none text-dark p-2 text-capitalize rounded-3">code</a>
+                        <a href="#" class="text-decoration-none p-2 text-capitalize rounded-3"  data-fillter="code">code</a>
                         \
-                        <a href="#" class="text-decoration-none text-dark p-2 text-capitalize rounded-3">photo</a>
+                        <a href="#" class="text-decoration-none p-2 text-capitalize rounded-3" data-fillter="photo">photo</a>
                         \
-                        <a href="#" class="text-decoration-none text-dark p-2 text-capitalize rounded-3">app</a>
+                        <a href="#" class="text-decoration-none p-2 text-capitalize rounded-3" data-fillter="app">app</a>
                     </div>
                 </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all Design">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-01.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all code">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-02.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all photo">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-03.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all Design">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-04.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all photo">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-05.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all app">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-06.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all code">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-07.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 all app">
                     <div class="box mb-3" data-work="Application">
                         <img src="images/work-08.jpg" alt="">
                     </div>
@@ -202,7 +179,7 @@ rel="stylesheet">
     </div>
     <!-- End Portfolio  -->
     <!-- Start About  -->
-    <div class="about pt-5 pb-5" id="about">
+    <div class="about pt-5 pb-5">
         <div class="container">
         <div class="text-center">
             <div class="head pt-5 pb-5 position-relative">
@@ -253,9 +230,9 @@ rel="stylesheet">
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6">
-                    <div class="box">
+                    <div class="box mt-4">
                         <img src="images/team-1.png" alt="">
-                        <div class="name p-3 text-light">
+                        <div class="name p-3 text-light text-center">
                             <h4>Luke Skywalker</h4>
                         </div>
                         <div class="foot p-3 bg-white ">
@@ -264,9 +241,9 @@ rel="stylesheet">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="box">
+                    <div class="box mt-4">
                         <img src="images/team-2.png" alt="">
-                        <div class="name p-3 text-light">
+                        <div class="name p-3 text-light text-center">
                             <h4>Luke Skywalker</h4>
                         </div>
                         <div class="foot p-3 bg-white ">
@@ -275,9 +252,9 @@ rel="stylesheet">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="box">
+                    <div class="box mt-4">
                         <img src="images/team-3.png" alt="">
-                        <div class="name p-3 text-light">
+                        <div class="name p-3 text-light text-center">
                             <h4>Luke Skywalker</h4>
                         </div>
                         <div class="foot p-3 bg-white ">
@@ -286,9 +263,9 @@ rel="stylesheet">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="box">
+                    <div class="box mt-4">
                         <img src="images/team-4.png" alt="">
-                        <div class="name p-3 text-light">
+                        <div class="name p-3 text-light text-center">
                             <h4>Luke Skywalker</h4>
                         </div>
                         <div class="foot p-3 bg-white ">
@@ -306,32 +283,32 @@ rel="stylesheet">
             <div class="text-center">
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-sm-6 mb-5 mt-5">
-                        <div class="box">
+                        <div class="box mt-4">
                             <img src="images/tech-1.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 mb-5 mt-5">
-                        <div class="box">
+                        <div class="box mt-4">
                             <img src="images/tech-2.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 mb-5 mt-5">
-                        <div class="box">
+                        <div class="box mt-4">
                             <img src="images/tech-3.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 mb-5 mt-5">
-                        <div class="box">
+                        <div class="box mt-4">
                             <img src="images/tech-4.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 mb-5 mt-5">
-                        <div class="box mb-sm-4">
+                        <div class="box mt-4">
                             <img src="images/tech-1.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 mb-5 mt-5">
-                        <div class="box">
+                        <div class="box mt-4">
                             <img src="images/tech-2.png" alt="">
                         </div>
                     </div>
@@ -360,8 +337,8 @@ rel="stylesheet">
                 </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 mt-2 mb-2">
-                <div class="box">
+            <div class="col-lg-3 col-md-6 mt-2 mb-2">
+                <div class="box mt-4">
                     <img src="images/blog-1.jpg" alt="">
                     <div class="text shadow-sm">
                         <h4 class="text-capitalize pt-2 ps-3 text-black-50">jan 17, 2022</h4>
@@ -369,8 +346,8 @@ rel="stylesheet">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-2 mb-2">
-                <div class="box">
+            <div class="col-lg-3 col-md-6 mt-2 mb-2">
+                <div class="box mt-4">
                     <img src="images/blog-2.jpg" alt="">
                     <div class="text shadow-sm">
                         <h4 class="text-capitalize pt-2 ps-3 text-black-50">jan 17, 2022</h4>
@@ -378,9 +355,18 @@ rel="stylesheet">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-2 mb-2">
-                <div class="box">
+            <div class="col-lg-3 col-md-6 mt-2 mb-2">
+                <div class="box mt-4">
                     <img src="images/blog-3.jpg" alt="">
+                    <div class="text shadow-sm">
+                        <h4 class="text-capitalize pt-2 ps-3 text-black-50">jan 17, 2022</h4>
+                        <p class="fs-4 ps-2">Some Awesome Blog Title Here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mt-2 mb-2">
+                <div class="box mt-4">
+                    <img src="images/blog-1.jpg" alt="">
                     <div class="text shadow-sm">
                         <h4 class="text-capitalize pt-2 ps-3 text-black-50">jan 17, 2022</h4>
                         <p class="fs-4 ps-2">Some Awesome Blog Title Here</p>
@@ -395,11 +381,11 @@ rel="stylesheet">
     </div>
     <!-- End Blog -->
     <!-- Start Contact  -->
-    <div class="contact pt-5 pb-5" id="contact">
+    <div class="contact pt-5 pb-5">
         <div class="container d-lg-flex justify-content-center align-items-center d-md-block text-md-center">
             <h2 class="fs-4 text-capitalize">subscribe to our newsletter:</h2>
             <input type="email" placeholder="Enter Email Address" class="ms-md-auto ms-lg-4 me-lg-4">
-            <a href="#" class="btn d-md-block mt-4">subscribe</a>
+            <a href="#" class="btn d-md-block mt-md-4">subscribe</a>
         </div>
     </div>
     <!-- End Contact  -->
@@ -407,16 +393,16 @@ rel="stylesheet">
     <div class="footer pt-5 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-12">
-                    <div class="box">
+                <div class="col-xl-3 col-lg-4 .col-md-4 col-sm-12">
+                    <div class="box mt-4">
                         <img src="images/logo.png" alt="">
                         <p class="mt-2 text-white-50">Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, 
                             lacinia eget consectetur sed, convallis at tellus.</p>
                         <p class="mt-2 text-white-50 text-capitalize">create by <span>ahmed walid</span> <br> &copy; 2022 - <span>Bondi Inc</span></p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-12">
-                    <div class="box">
+                <div class="col-xl-3 col-lg-4 .col-md-4 col-sm-12">
+                    <div class="box mt-4">
                         <h2 class="text-light text-capitalize fs-4">links</h2>
                         <ul class="p-0">
                             <li class="">
@@ -440,10 +426,10 @@ rel="stylesheet">
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-12">
-                    <div class="box">
+                <div class="col-xl-3 col-lg-4 .col-md-4 col-sm-12">
+                    <div class="box mt-4">
                         <h2 class="text-light text-capitalize fs-4">About Us</h2>
-                        <ul>
+                        <ul class="p-0">
                             <li>
                                 <a href="#" class="text-capitalize text-white-50 text-decoration-none p-2 d-block">Sign In</a>
                             </li>
@@ -462,11 +448,11 @@ rel="stylesheet">
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="box">
+                <div class="col-xl-3 col-lg-4 .col-md-4 col-sm-12">
+                    <div class="box mt-4">
                         <h2 class="text-light text-capitalize fs-4">Contact Us</h2>
                         <p class="text-white-50">Get in touch with us via mail phone.We are waiting for your call or message</p>
-                        <a href="#" class="btn d-flex justify-content-center align-items-center">example@gamil.com</a>
+                        <a href="#" class="footer-link text-capitalize text-center text-decoration-none">example@gamil.com</a>
                         <div class="icons d-flex mt-5">
                             <div class="icon ms-2 d-flex justify-content-center align-items-center">
                                 <i class="fa-brands fa-facebook-f text-white"></i>
@@ -478,7 +464,7 @@ rel="stylesheet">
                                 <i class="fa-brands fa-linkedin-in text-white"></i>
                             </div>
                             <div class="icon ms-2 d-flex justify-content-center align-items-center">
-                                <i class="fa-brands fa-youtube text-danger"></i>
+                                <i class="fa-brands fa-youtube text-white"></i>
                             </div>
                         </div>
                     </div>
@@ -487,7 +473,8 @@ rel="stylesheet">
         </div>
     </div>
     <!-- End Footer  -->
-    <button class="text-uppercase up">up</button>
+    <span class="text-uppercase up">up</span>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

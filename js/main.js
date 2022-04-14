@@ -1,85 +1,100 @@
-// Change landingSection backgroundImage
+// Header Section 
+
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= 600) {
+
+        $(".navbar").addClass("fixed")
+        
+    } else {
+
+        $(".navbar").removeClass("fixed")
+
+    }
+
+
+})
+
+$(".navbar ul li a").click(function (event) {
+
+    event.preventDefault()
+
+    $(this).addClass("active").parent().siblings().find("a").removeClass("active")
+
+    
+    var SectionScroll =  "." + $(this).data("scroll")
+    
+    $("body , html").animate({
+
+        scrollTop: $( "." + $(this).data("scroll")).offset().top - $(".navbar").innerHeight()
+
+    })
+
+})
+
+// Landing Section 
+
+$(window).ready(function () {
+
+    $(".landing").css("opacity","1")
+
+})
+
 let landingSection = document.querySelector(".landing")
 
-let landingArrey = [ "slide-1.jpg" , "slide-2.jpg" , "slide-3.jpg"]
+let LandingArrey = ["slide-1.jpg" , "slide-2.jpg" , "slide-3.jpg"]
 
-let RandomNumber = Math.floor(Math.random() * landingArrey.length)
+let RandomNumber = Math.floor(Math.random() * LandingArrey.length)
 
-setInterval(function() {
-    let RandomNumber = Math.floor(Math.random() * landingArrey.length);
-    landingSection.style.backgroundImage = "url(images/landing-bg/"+ landingArrey[RandomNumber]+")"
+setInterval(function () {
+    
+    let RandomNumber = Math.floor(Math.random() * LandingArrey.length)
+
+    landingSection.style.backgroundImage = "url(images/"+ LandingArrey[RandomNumber] +")"
+
 } , 10000)
 
-let Header = document.querySelector("nav")
-let ButtonUp = document.querySelector(".up")
+
+// Portfolio Section 
+
+$(".porfolio a").click(function (el) {
+
+    el.preventDefault()
+
+    $(this).addClass("active").siblings().removeClass("active")
+
+    console.log()
+
+    var BoxFillter = "." + $(this).data("fillter")
+
+    $(".porfolio .row > div").fadeOut()
+    $(".porfolio .row "+ BoxFillter +"").fadeIn()
 
 
-window.onscroll = function () {
-    console.log(`scrolling value is ${window.scrollY}`)
-    // Button Scroll To Top 
-    if (window.scrollY >= 800) {
-        ButtonUp.classList.add("fixed")
-    } else {
-        ButtonUp.classList.remove("fixed")
-    }
-    // Fixed Header 
-    if (window.scrollY >= 800) {
-        Header.classList.add("fixed")
-    } else {
-        Header.classList.remove("fixed")
-    }
-}
+})
 
-// Click Button To Scroll To Top 
+// Button To Top 
 
-ButtonUp.onclick = function () {
-    window.scrollTo({
-        left: 0,
-        top: 0,
-        behavior: "smooth"
+$("span.up").on("click" ,function () {
+
+    $("html , body").animate({
+
+        scrollTop: 0
+
     })
-}
 
-// Click Search Icon 
-let SearchIcon = document.querySelector("nav .search")
-let Input = document.querySelector(".input")
-let ExitInput = document.querySelector(".input .exit")
-
-SearchIcon.addEventListener("click" , function () {
-    Input.classList.add("active")
 })
 
-ExitInput.addEventListener("click" , function () {
-    Input.classList.remove("active")
-})
+$(window).scroll(function () {
 
-// Click login Button
+    if ($(window).scrollTop() >= 600) {
 
-let loginButton = document.querySelector("nav .btn")
-let form = document.querySelector(".login")
+        $("span.up").addClass("fixed")
 
-loginButton.addEventListener("click" , function () {
-    form.classList.add("active")
-})
-
-let Clicklogin = document.querySelector(".login .exit")
-
-Clicklogin.addEventListener("click" , function () {
-    form.classList.remove("active")
-})
-
-// Click To Show Password
-
-let ButtonPassword = document.querySelector(".show")
-let InputPassword = document.querySelector("#passvalid")
-console.log(InputPassword)
-
-ButtonPassword.onclick = function () {
-    if (this.textContent === "Show Password") {
-        InputPassword.setAttribute("type" , "text")
-        this.textContent = "Hide Password"
     } else {
-        InputPassword.setAttribute("type" , "password")
-        this.textContent = "Show Password"
+
+        $("span.up").removeClass("fixed")
+
     }
-}
+
+})
